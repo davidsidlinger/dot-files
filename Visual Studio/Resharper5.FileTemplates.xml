@@ -1,0 +1,32 @@
+<TemplatesExport>
+  <Template uid="325146a9-3ac0-4a43-bf16-1db30ac9b993" shortcut="" description="Controller" text="namespace $CURRENT_NAMESPACE$&#xD;&#xA;{&#xD;&#xA;	[System.Web.Mvc.HandleError]&#xD;&#xA;	public class $CLASS_NAME$ : System.Web.Mvc.Controller&#xD;&#xA;	{&#xD;&#xA;		public System.Web.Mvc.ActionResult Index()&#xD;&#xA;		{&#xD;&#xA;			return View();&#xD;&#xA;		}&#xD;&#xA;	}&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ProjectLanguageContext language="CSharp" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="CURRENT_NAMESPACE" expression="fileDefaultNamespace()" initialRange="-1" />
+      <Variable name="CLASS_NAME" expression="getFileNameWithoutExtension()" initialRange="-1" />
+    </Variables>
+    <CustomProperties>
+      <Property key="FileName" value="Class" />
+      <Property key="Extension" value="cs" />
+      <Property key="ValidateFileName" value="True" />
+    </CustomProperties>
+  </Template>
+  <Template uid="484e1421-e0b9-4e81-9c03-77c48510d0c6" shortcut="" description="Fixture" text="namespace $NAMESPACE$&#xD;&#xA;{&#xD;&#xA;	[NUnit.Framework.TestFixtureAttribute]&#xD;&#xA;  public class $CLASS$ {$END$}&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <ProjectLanguageContext language="CSharp" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NAMESPACE" expression="fileDefaultNamespace()" initialRange="-1" />
+      <Variable name="CLASS" expression="getFileNameWithoutExtension()" initialRange="-1" />
+    </Variables>
+    <CustomProperties>
+      <Property key="FileName" value="Fixture" />
+      <Property key="Extension" value="cs" />
+      <Property key="ValidateFileName" value="True" />
+    </CustomProperties>
+  </Template>
+</TemplatesExport>

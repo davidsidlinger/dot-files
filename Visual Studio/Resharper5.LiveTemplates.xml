@@ -1,0 +1,249 @@
+<TemplatesExport>
+  <Template uid="e640477f-6805-43f4-8dff-1d7e690c5046" shortcut="ane" description="Argument Null Exception" text="if ($PARAM$ == null)&#xD;&#xA;{&#xD;&#xA;	throw new System.ArgumentNullException(&quot;$PARAM$&quot;);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="PARAM" expression="parameterOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="c44ce9d5-093a-4c4d-a01f-7a2efd154726" shortcut="asrtn" description="Debug.Assert something is not null" text="System.Diagnostics.Debug.Assert($VAR$ != null);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="VAR" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="e9df50ef-636d-4dfa-ae3f-f8f222897e09" shortcut="ens" description="Contract.Ensures" text="System.Diagnostics.Contracts.Contract.Ensures($END$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="3c938c70-c2bf-4a3c-b1ab-4d5b5ffcf723" shortcut="ensnotnull" description="Contract.Ensures returns not null" text="System.Diagnostics.Contracts.Contract.Ensures(System.Diagnostics.Contracts.Contract.Result&lt;$RETURNTYPE$&gt;() != null);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="RETURNTYPE" expression="completeSmart()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="601c75e8-de7b-41fc-854d-94fa7f3325e2" shortcut="ld" description="Log debug" text="$LOG$.Debug(&quot;$END$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6165557c-3b8c-41df-8b9a-79625b43ea67" shortcut="ldf" description="Log debug format" text="$LOG$.DebugFormat(System.Globalization.CultureInfo.CurrentCulture, &quot;$END${0}&quot;, $TOLOG$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+      <Variable name="TOLOG" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="f26f01da-f751-42ca-9c12-703579c06fe0" shortcut="le" description="Log error" text="$LOG$.Error(&quot;$END$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b0c8bac1-85a5-45dd-924b-1f6c18133965" shortcut="lee" description="Log error with exception" text="$LOG$.Error(&quot;$END$&quot;, $EX$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+      <Variable name="EX" expression="variableOfType(&quot;System.Exception&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="541b4d85-c607-450c-9921-5fe0ba805837" shortcut="lef" description="Log error format" text="$LOG$.ErrorFormat(System.Globalization.CultureInfo.CurrentCulture, &quot;$END${0}&quot;, $TOLOG$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+      <Variable name="TOLOG" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="82e90d86-528d-49e9-98b2-bba2f43d31b7" shortcut="lfe" description="Log fatal with exception" text="$LOG$.Fatal(&quot;$END$&quot;, $EX$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+      <Variable name="EX" expression="variableOfType(&quot;System.Exception&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="0bf99811-aafb-481d-9755-3510a58c7263" shortcut="li" description="Log info" text="$LOG$.Info(&quot;$END$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="58c7450f-a4cf-4953-88e0-90a405c9b1ab" shortcut="lif" description="Log info format" text="$LOG$.InfoFormat(System.Globalization.CultureInfo.CurrentCulture, &quot;$END${0}&quot;, $TOLOG$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+      <Variable name="TOLOG" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6287ea63-a5ea-459b-96dd-f826aa73e46a" shortcut="lw" description="Log warn" text="$LOG$.Warn(&quot;$END$&quot;)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="7801e0cd-781c-43ec-bc2b-d93a6f7445db" shortcut="lwf" description="Log warn format" text="$LOG$.WarnFormat(System.Globalization.CultureInfo.CurrentCulture, &quot;$END${0}&quot;, $TOLOG$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="LOG" expression="variableOfType(&quot;log4net.ILog&quot;)" initialRange="0" />
+      <Variable name="TOLOG" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="8d763869-58fe-48b2-bd36-55c6e0c66eee" shortcut="noe" description="ArgumentOutOfRangeException for null or empty strings" text="if(string.IsNullOrEmpty($ARG$))&#xD;&#xA;{&#xD;&#xA;	throw new System.ArgumentOutOfRangeException(&quot;$ARG$&quot;, $ARG$, &quot;$ARGCASED$ cannot be null or empty.&quot;);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="ARG" expression="parameterOfType(&quot;System.String&quot;)" initialRange="0" />
+      <Variable name="ARGCASED" expression="capitalize(ARG)" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="9a363132-f62d-4eb7-b314-fbe495a161a8" shortcut="objectinvariant" description="Object Invariant method" text="[System.Diagnostics.Contracts.ContractInvariantMethodAttribute()]&#xD;&#xA;private void ObjectInvariant()&#xD;&#xA;{&#xD;&#xA;	System.Diagnostics.Contracts.Contract.Invariant($END$);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="4a1c9758-2beb-4ff0-b971-23b9e0d06dee" shortcut="req" description="Contract.Requires" text="System.Diagnostics.Contracts.Contract.Requires($END$);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables />
+    <CustomProperties />
+  </Template>
+  <Template uid="8fc40144-7940-489f-a9fb-51b97c81b5f7" shortcut="reqnotnull" description="Contract.Requires parameter not null" text="System.Diagnostics.Contracts.Contract.Requires($PARAM$ != null);" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="PARAM" expression="parameterOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="1fd97606-dfad-4125-b7cc-65aba1cc8dd1" shortcut="sminmax" description="Check string length" text="if ($VAR$ == null || $VAR$.Length &lt; $MIN$ || $VAR$.Length &gt; $MAX$)&#xD;&#xA;{&#xD;&#xA;	throw new System.ArgumentOutOfRangeException(&quot;$VAR$&quot;, $VAR$, &quot;$UVAR$ length must be between $MIN$ and $MAX$.&quot;);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="VAR" expression="parameterOfType(&quot;System.String&quot;)" initialRange="0" />
+      <Variable name="MIN" expression="" initialRange="0" />
+      <Variable name="MAX" expression="" initialRange="0" />
+      <Variable name="UVAR" expression="capitalize(VAR)" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="1521c169-f293-46c2-a122-9a48e41eab05" shortcut="test" description="Creates an NUnit test" text="[NUnit.Framework.TestAttribute]&#xD;&#xA;[NUnit.Framework.CategoryAttribute(&quot;$CATEGORY$&quot;)]&#xD;&#xA;public void $METHODNAME$()&#xD;&#xA;{&#xD;&#xA;	$END$&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="CATEGORY" expression="" initialRange="0" />
+      <Variable name="METHODNAME" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="6531494e-b6b0-4045-9015-8a3664120cc0" shortcut="logger" description="Create a log4net logger" text="private static readonly log4net.ILog _log = log4net.LogManager.GetLogger(typeof($TYPE$));" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="TypeMember" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TYPE" expression="typeName()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="38645455-c1fa-4763-bebb-055c6f9251a7" shortcut="sf" description="Call string.Format with CultureInfo.CurrentCulture" text="string.Format(System.Globalization.CultureInfo.CurrentCulture, &quot;$END${0}&quot;, $TOINSERT$)" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="TOINSERT" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="b068f6e9-e7d2-498d-9481-b54c0ccf12bf" shortcut="anee" description="Argument null check for enumerables" text="if ($PARAM$ == null || $PARAM$.Any($ITEMVAR$ =&gt; $ITEMVAR$ == null))&#xD;&#xA;{&#xD;&#xA;	throw new System.ArgumentNullException(&quot;$PARAM$&quot;);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="PARAM" expression="parameterOfType(&quot;System.Collections.Generic.IEnumerable`1&quot;)" initialRange="0" />
+      <Variable name="ITEMVAR" expression="" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+  <Template uid="1c43d02a-1ac1-458a-846b-81e85b248177" shortcut="now" description="NullOrWhiteSpace" text="if(string.IsNullOrWhiteSpace($ARG$))&#xD;&#xA;{&#xD;&#xA;	throw new System.ArgumentOutOfRangeException(&quot;$ARG$&quot;, $ARG$, &quot;$ARGCASED$ cannot be null or empty.&quot;);&#xD;&#xA;}" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Statement" minimumLanguageVersion="3.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="ARG" expression="parameterOfType(&quot;System.String&quot;)" initialRange="0" />
+      <Variable name="ARGCASED" expression="capitalize(ARG)" initialRange="-1" />
+    </Variables>
+    <CustomProperties />
+  </Template>
+</TemplatesExport>
