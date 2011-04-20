@@ -246,4 +246,14 @@
     </Variables>
     <CustomProperties />
   </Template>
+  <Template uid="1111d2f0-ebef-44c5-bba0-f654ca17f7c6" shortcut="none" description="Option.None" text="Option.None&lt;$NONETYPE$&gt;()" reformat="True" shortenQualifiedReferences="True">
+    <Context>
+      <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
+    </Context>
+    <Categories />
+    <Variables>
+      <Variable name="NONETYPE" expression="completeSmart()" initialRange="0" />
+    </Variables>
+    <CustomProperties />
+  </Template>
 </TemplatesExport>
