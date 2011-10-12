@@ -9,16 +9,6 @@
     </Variables>
     <CustomProperties />
   </Template>
-  <Template uid="c44ce9d5-093a-4c4d-a01f-7a2efd154726" shortcut="asrtn" description="Debug.Assert something is not null" text="System.Diagnostics.Debug.Assert($VAR$ != null);" reformat="True" shortenQualifiedReferences="True">
-    <Context>
-      <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
-    </Context>
-    <Categories />
-    <Variables>
-      <Variable name="VAR" expression="variableOfType(&quot;System.Object&quot;)" initialRange="0" />
-    </Variables>
-    <CustomProperties />
-  </Template>
   <Template uid="e9df50ef-636d-4dfa-ae3f-f8f222897e09" shortcut="ens" description="Contract.Ensures" text="System.Diagnostics.Contracts.Contract.Ensures($END$);" reformat="True" shortenQualifiedReferences="True">
     <Context>
       <CSharpContext context="Statement" minimumLanguageVersion="2.0" />
@@ -246,7 +236,7 @@
     </Variables>
     <CustomProperties />
   </Template>
-  <Template uid="1111d2f0-ebef-44c5-bba0-f654ca17f7c6" shortcut="none" description="Option.None" text="Option.None&lt;$NONETYPE$&gt;()" reformat="True" shortenQualifiedReferences="True">
+  <Template uid="1111d2f0-ebef-44c5-bba0-f654ca17f7c6" shortcut="none" description="Option.None" text="Options.Option.Create&lt;$NONETYPE$&gt;()$END$" reformat="False" shortenQualifiedReferences="True">
     <Context>
       <CSharpContext context="Expression" minimumLanguageVersion="2.0" />
     </Context>

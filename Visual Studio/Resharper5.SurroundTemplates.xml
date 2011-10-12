@@ -23,10 +23,10 @@
     <Variables />
     <CustomProperties />
   </Template>
-  <Template uid="944ed09a-13d7-4c10-9273-2ebba0572dfe" shortcut="" description="Option.Some" text="Option.Some($SELECTION$)" reformat="True" shortenQualifiedReferences="True">
-    <Context>
-      <CSharpContext context="Everywhere" minimumLanguageVersion="2.0" />
-    </Context>
+  <Template uid="860b9f99-925c-4535-bf55-7387d5fb5364" shortcut="" description="Block Comment" text="/*&#xD;&#xA;$SELECTION$&#xD;&#xA;*/&#xD;&#xA;$END$" reformat="True" shortenQualifiedReferences="True">
+    <Scopes>
+      <Scope type="InCSharpFile" minimumLanguageVersion="2.0" />
+    </Scopes>
     <Categories />
     <Variables />
     <CustomProperties />
