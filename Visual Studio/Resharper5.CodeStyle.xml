@@ -1,4 +1,8 @@
 <CodeStyleSettings>
+  <CSS>
+    <FormatSettings />
+    <Naming2 />
+  </CSS>
   <CSharp>
     <FormatSettings>
       <ALIGN_FIRST_ARG_BY_PAREN>True</ALIGN_FIRST_ARG_BY_PAREN>
@@ -43,6 +47,7 @@
       <WRAP_ARGUMENTS_STYLE>CHOP_IF_LONG</WRAP_ARGUMENTS_STYLE>
       <WRAP_BEFORE_FIRST_TYPE_PARAMETER_CONSTRAINT>True</WRAP_BEFORE_FIRST_TYPE_PARAMETER_CONSTRAINT>
       <WRAP_EXTENDS_LIST_STYLE>CHOP_IF_LONG</WRAP_EXTENDS_LIST_STYLE>
+      <WRAP_LIMIT>160</WRAP_LIMIT>
       <WRAP_MULTIPLE_TYPE_PARAMEER_CONSTRAINTS_STYLE>CHOP_ALWAYS</WRAP_MULTIPLE_TYPE_PARAMEER_CONSTRAINTS_STYLE>
       <WRAP_PARAMETERS_STYLE>CHOP_IF_LONG</WRAP_PARAMETERS_STYLE>
     </FormatSettings>
@@ -292,6 +297,21 @@ II.2.12 <HandlesEvent />
 </Patterns>
 ]]></CustomMemberReorderingPatterns>
   </CSharp>
+  <HTML>
+    <FormatSettings />
+  </HTML>
+  <JavaScript>
+    <FormatSettings />
+    <Naming2>
+      <UserRule Name="JS_LOCAL_VARIABLE" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+      <UserRule Name="JS_FUNCTION" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+      <UserRule Name="JS_PARAMETER" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+      <UserRule Name="JS_LABEL" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+      <UserRule Name="JS_GLOBAL_VARIABLE" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+      <UserRule Name="JS_OBJECT_PROPERTY_OF_FUNCTION" Inspect="True" Prefix="" Suffix="" Style="aaBb" />
+      <UserRule Name="JS_CONSTRUCTOR" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+    </Naming2>
+  </JavaScript>
   <VB>
     <FormatSettings />
     <ImportsSettings />
@@ -301,14 +321,19 @@ II.2.12 <HandlesEvent />
     </Naming2>
   </VB>
   <Web>
-    <Naming2 />
+    <Naming2>
+      <UserRule Name="ASP_TAG_NAME" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+      <UserRule Name="ASP_TAG_PREFIX" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+      <UserRule Name="ASP_FIELD" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+      <UserRule Name="ASP_HTML_CONTROL" Inspect="True" Prefix="" Suffix="" Style="AaBb" />
+    </Naming2>
   </Web>
-  <Xaml>
-    <Naming2 />
-  </Xaml>
   <XML>
     <FormatSettings />
   </XML>
+  <Xaml>
+    <Naming2 />
+  </Xaml>
   <GenerateMemberBody />
   <Naming2>
     <EventHandlerPatternLong>$object$_On$event$</EventHandlerPatternLong>
